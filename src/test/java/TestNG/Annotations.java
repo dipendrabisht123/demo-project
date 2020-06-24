@@ -26,9 +26,9 @@ public class Annotations {
 	public void Test1() {
 
 		System.out.println("Test1");
-		WebDriverManager.chromedriver().version("2.41").setup();
+		/*WebDriverManager.chromedriver().version("2.41").setup();
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();*/
 		
 		driver.get("http://testingmasters.com/hrm");
 		String sTitle = driver.getTitle();
