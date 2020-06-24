@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<test name="Test1" enabled="true">
+		<classes>
+			<class name="TestNG.Annotations">
+				<parameter name="classLevel" value="classLevel" />
+				<methods>
+					<include name="Test1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Test2" enabled="false">
+		<classes>
+			<class name="TestNG.Annotations">
+				<parameter name="classLevel" value="classLevel" />
+				<methods>
+				
+					<include name="Test2">
+						<parameter name="name" value="Test2"></parameter>
+						<parameter name="id" value="2"></parameter>
+					</include>
+					<include name="Test3">
+						<parameter name="Emp_Name" value="Test3"></parameter>
+						<parameter name="Emp_ID" value="3"></parameter>
+					</include>
+					<include name="Test5" />
+					<include name="Test4" />
+					<include name="Test6" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test3" enabled="false">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="TestNG.Annotations" />
+
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Suite -->
